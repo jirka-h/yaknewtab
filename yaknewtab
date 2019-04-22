@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 #
-# yakuake-session - A script to create new Yakuake sessions from command-line.
+# yaknewtab - A POSIX shell script to create new Yakuake tabs (a.k.a. sessions).
 #
 # Copyright 2010-2018 Jesús Torres <jmtorres@ull.es>
+#                2019 Peter J. Mello <admin@petermello.net>
 #
-# yakuake-session comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
+# yaknewtab comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
 # This is free software, and you are welcome to redistribute it
 # under certain conditions; see COPYING for details.
 #
 
-FISH_SHELL= # Set to 1 to override the fish shell autodetection
+ # Set to 1 to override the fish shell autodetection
+FISH_SHELL=
 if [ -z "$FISH_SHELL" ]; then
   [[ "$SHELL" == */fish ]] && FISH_SHELL=1 || FISH_SHELL=0
 fi
