@@ -1,0 +1,15 @@
+Source: yaknewtab
+Section: kde
+Priority: optional
+Maintainer: Peter J. Mello <admin@petermello.net>
+Build-Depends: debhelper-compat (= 11)
+Standards-Version: 4.3.0
+Homepage: https://github.com/RogueScholar/yaknewtab
+Vcs-Browser: https://github.com/RogueScholar/yaknewtab
+Vcs-Git: https://github.com/RogueScholar/yaknewtab.git
+
+Package: yaknewtab
+Architecture: all
+Depends: ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
