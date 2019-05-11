@@ -1,12 +1,16 @@
-# yaknewtab - a script to create new Yakuake tabs (a/k/a "Sessions")
+# yaknewtab
 
-_Forked from [yakuake-session](https://github.com/aplatanado/yakuake-session) by [Jesús Torres](https://github.com/aplatanado), (C) 2010-2018._
+#### A shell script for opening new Yakuake tabs/sessions
+
+___
+_Forked from [yakuake-session](https://github.com/aplatanado/yakuake-session) by [Jesús Torres](https://github.com/aplatanado), © 2010-2018._
+___
 
 ## What is yaknewtab?
 
 **yaknewtab** is a (mostly) POSIX shell script that greatly simplifies the creation of new tabs/sessions in Yakuake. It uses simple logic to determine the D-Bus CLI tool needed to communicate with the already-running Yakuake process, adding the specifics (supplied as standard POSIX flags and arguments) in the necessary syntax to generate the desired result.
 
-I forked it from the original developer mainly to streamline the approach, more closely following concensus best practices, and ultimately achieving (I believe) greater consistency of operation on a wider range of shells. Like the upstream project the goal is a better integration of Yakuake with the desktop environment (typically KDE Plasma 5) and other resident applications. This is something which has often been constrained by its design as an "always-running" foreground process that remains hidden from view until triggered, insisting on D-Bus as the only method to receive user directives that are not issued through its GUI.
+I forked it from the original developer mainly to streamline the approach, more closely following consensus best practices, and ultimately achieving (I believe) greater consistency of operation on a wider range of shells. Like the upstream project the goal is a better integration of Yakuake with the desktop environment (typically KDE Plasma 5) and other resident applications. This is something which has often been constrained by its design as an "always-running" foreground process that remains hidden from view until triggered, insisting on D-Bus as the only method to receive user directives that are not issued through its GUI.
 
 Where on most *nix systems a needed terminal instance can be invoked by simply calling its executable, with Yakuake that would add another running instance, conflicting with the one which was already running and hidden. To successfully accomplish new instance creation with Yakuake (i.e. telling the hidden instance to show itself and add a new tab in the requested working directory) requires use of the D-Bus interface, a task sufficiently esoteric that even many power users struggle to do without hiccups.
 
@@ -16,7 +20,7 @@ For example, thanks to it, Yakuake can replace Konsole in "Open terminal here" a
 
 A terminal emulator developed and distributed by KDE as part of the Plasma desktop environment. Visually, it seeks to hearken to the celebrated console panel from the 90s computer game, Quake: sliding into and out of view from the (top) edge of the screen upon the press of a hotkey.
 
-The name is an exquisite example of over-the-top open source project naming irony. Technically a portmanteau crossed with a backronym, it's derived from the motto "Yet Another Kuake." In keeping with KDE project tradition, phonemes that can be represented with the letter 'k' are styled as such, explaining the odd spelling.
+The name is an exquisite example of over-the-top open source project naming irony. Technically a portmanteau crossed with a "backronym," it's derived from the motto "Yet Another Kuake." In keeping with KDE project tradition, phonemes that can be represented with the letter 'k' are styled as such, explaining the odd spelling.
 
 #### _Links to more information about Yakuake_
 
@@ -35,94 +39,106 @@ The name is an exquisite example of over-the-top open source project naming iron
   * Issuing the command `export FISH_SHELL=0` temporarily disables the Fish shell adaptations, while `export FISH_SHELL=1` temporarily enables them
 
   * For a permanent change, use the following command (provided that you placed it in a location in your $PATH) to open the script file in the default editor and change line 14 accordingly: `FISH_SHELL=1` to enable the Fish shell changes or `FISH_SHELL=0` to disable them.
+
       ```bash
       which yaknewtab | xargs sudoedit -e
       ```
-
 
 ## Installation
 
 Clone this repository.
 
 ```bash
-git clone https://github.com/RogueScholar/yaknewtab.git
+git clone https://github.com/RogueScholar/yaknewtab.git && cd yaknewtab
 ```
 
-Copy the yaknewtab script to `~/bin`, `/usr/local/bin` or some other directory
-in your `$PATH` variable, if you don't want to be forced to the path of the script when
-invoked. For example, on Ubuntu:
+Copy the yaknewtab script to `~/bin`, `/usr/local/bin` or some other directory in your `$PATH` variable so it can be executed by just its name.
+
+If the file is in any other location you will be forced to type the relative or full path of the script everytime you wish to use it.
 
 ```bash
-sudo cp yaknewtab /usr/local/bin
+# Examine your $PATH environment variable to aid in selecting an appropriate folder
+# (Shown here with example output)
+
+$ echo $PATH
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/bin"
+
+# Copy the script to the folder of your choice and ensure
+# it has the right ownership and permissions
+
+# Installation system-wide (for all users)
+$ sudo chown root:root ./yaknewtab && sudo chmod 0755 ./yaknewtab
+$ sudo cp ./yaknewtab /usr/local/bin
+
+# Installation for only the current user
+$ chmod 0755 ./yaknewtab
+$ cp ./yaknewtab $HOME/bin
 ```
 
 ## Usage
 
 To invoke yaknewtab:
 
-```bash
-yaknewtab
-```
+`yaknewtab`
 
-Without arguments, yakuake-session creates a new session in the currently
-running Yakuake terminal emulator.
+Without arguments, yaknewtab creates a new session in the currently running Yakuake terminal emulator.
 
 The option `-e` allows to indicate a command to execute in the new session.
 
 ```bash
-yakuake-session -e ls
+yaknewtab -e ls
 ```
 
 The argument `-t` sets the title for the new tab.
 
 ```bash
-yakuake-session -t "Title"
+yaknewtab -t "Title"
 ```
 
-The session working directory is changed to the directory where yakuake-session
+The session working directory is changed to the directory where yaknewtab
 was called, before execute the command. If we want to launch the command from
 user's home directory then we would use the option `-h`.
 
 ```bash
-yakuake-session -h -e ls
+yaknewtab -h -e ls
 ```
 
 If the command requires some arguments, they are taken from non-option
-arguments passed to yakuake-session. That means that if some arguments for the
-command begin with `-`, they must passed to yakuake-session after `--`.
+arguments passed to yaknewtab. That means that if some arguments for the
+command begin with `-`, they must passed to yaknewtab after `--`.
 
 ```bash
-yakuake-session -h -e ssh -- -X user@example.com
+yaknewtab -h -e ssh -- -X user@example.com
 ```
 
 Another useful option is `--workdir`. It allows to change the working directory
 before execute the command.
 
 ```bash
-yakuake-session --workdir /tmp -e ls
+yaknewtab --workdir /tmp -e ls
 ```
 
-yakuake-session has many other options that were shown in help.
+yaknewtab has many other options that were shown in help.
 
 ```bash
-yakuake-session --help
+$ yaknewtab --help
 
-Usage: yakuake-session [options] [args]
+  Usage: yaknewtab [options] [args]
 
-Options:
-  --help                    Show help about options.
-  -h, --homedir             Set the working directory of the new tab to the user's home.
-  -w, --workdir <dir>       Set the working directory of the new tab to 'dir'
-  --hold, --noclose         Do not close the session automatically when the command ends.
-  -p <property=value>       Change the value of a profile property (only for KDE 4).
-  -q                        Do not open yakuake window.
-  -t <title>                Set the title of the new tab
-  -e <cmd>                  Command to execute. This option will catch all following arguments, so use it as the last option.
-  --fish | --nofish         Override default shell autodetection to enable or disable the fish shell support.
-  --debug                   Show yakuake_session debug information.
+    Options:
+      -q                      Keep the Yakuake window hidden
+      -e <cmd>                Command(s) to execute; this flag will catch all subsequent arguments, so must be called last
+      -t <title>              Set <title> as the title of the new tab
+      -p <property=value>     Change the value of a profile property (only for KDE 4)
+      -h, --homedir           Open a new tab with '$HOME' as the working directory
+      -w, --workdir <dir>     Open a new tab with <dir> as the working directory
+      --hold, --noclose       Do not close the session automatically when the command ends
+      --fish | --nofish       Manually enable or disable the fish shell autocompletion support
+      --debug                 Redirect script debugging output to the console
+      --help                  Print this message
 
-Arguments:
-  args                      Arguments passed to command (for use with -e).
+    Arguments:
+      args                    Arguments passed to command from '-e' flag
 ```
 
 ## Action in Dolphin
@@ -139,30 +155,32 @@ cp ServiceMenus/konsolehere.desktop ~/.local/share/kservices5/ServiceMenus/
 ```
 
 If we do not want to change the behavior of "Open terminal here", then copy
-`yakuakehere.desktop` instead to add the new action "Open yakuake here" to
+`yaknewtab-here.desktop` instead to add the new action "Open yakuake here" to
 Dolphin.
 
 ```bash
 # KDE 4
-cp ServiceMenus/yakuakehere.desktop ~/.kde/share/kde4/services/ServiceMenus/
+cp ServiceMenus/yaknewtab-here.desktop ~/.kde/share/kde4/services/ServiceMenus/
 # KDE 5
-cp ServiceMenus/yakuakehere.desktop ~/.local/share/kservices5/ServiceMenus/
+cp ServiceMenus/yaknewtab-here.desktop ~/.local/share/kservices5/ServiceMenus/
 ```
 
 ## Quick Access Menu
 
-Konsole Profiles is a Plasma widget that allows to open a new terminal window,
-configured according to a select profile, and automatically execute a command
-in it. We can get something similar but for Yakuake using the QuickAccess
-widget. We only have to make a directory and setup a QuickAccess widget
-instance to use it as origin (I also like to disable the browsing). Then we
-add some "Link to Application" to that directory, such that each one use
-yakuake-session to create a new Yakuake session and to execute the command
-that we want.
+Konsole Profiles is a Plasma widget that allows to open a new terminal window, configured according to a select profile, and automatically execute a command in it. We can get something similar but for Yakuake using the QuickAccess widget.
 
-The file `examples/username@example.com.desktop` contains an example that launch
-a ssh client in a new Yakuake session.
+We only have to make a directory and setup a QuickAccess widget instance to use it as origin (I also like to disable the browsing). Then we add some "Link to Application" to that directory, such that each one use yaknewtab to create a new Yakuake session and to execute the command that we want.
 
-### SPDX-License-Identifier: AGPL-3.0-or-later
+The file `examples/yaknewtab-ssh.desktop` contains an example that launch a ssh client in a new Yakuake session.
 
-## ![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) _Copyleft: All rights reversed_. 2019 [Peter J. Mello](https://github.com/RogueScholar).
+## Contributing and licensing
+
+Contributers need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=AGPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
+
+<iframe id="e-sign-process" src="http://contributoragreements.org/u2s/276z9weywp" width="100%" height="100%"></iframe>
+
+![AGPL-3.0 license logo](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)
+
+Copyleft: All rights reversed. 2019 [Peter J. Mello](https://github.com/RogueScholar)
+
+![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) SPDX-License-Identifier: AGPL-3.0-or-later
