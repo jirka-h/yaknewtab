@@ -5,6 +5,8 @@
 
 [![made-with-bash](https://img.shields.io/static/v1.svg?label=Made%20With&message=Bash&color=blue&logo=GNU&style=for-the-badge)](https://www.gnu.org/software/bash/) [![GitHub issues](https://img.shields.io/github/issues/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/issues) [![GitHub stars](https://img.shields.io/github/stars/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/stargazers) ![GitHub last commit](https://img.shields.io/github/last-commit/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab?ref=badge_shield)
+
 ___
 _Forked from [yakuake-session](https://github.com/aplatanado/yakuake-session) by [Jesús Torres](https://github.com/aplatanado), © 2010-2018._
 ___
