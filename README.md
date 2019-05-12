@@ -1,11 +1,10 @@
 # yaknewtab [![GitHub license](https://img.shields.io/github/license/RogueScholar/yaknewtab.svg?logo=GNU&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/blob/master/LICENSE)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab?ref=badge_shield)
 
 ## A shell script for opening new Yakuake tabs/sessions
 
-[![made-with-bash](https://img.shields.io/static/v1.svg?label=Made%20With&message=Bash&color=blue&logo=GNU&style=for-the-badge)](https://www.gnu.org/software/bash/) [![GitHub issues](https://img.shields.io/github/issues/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/issues) [![GitHub stars](https://img.shields.io/github/stars/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/stargazers) ![GitHub last commit](https://img.shields.io/github/last-commit/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)
+[![made-with-bash](https://img.shields.io/static/v1.svg?label=Made%20With&message=Bash&color=blue&logo=GNU&style=for-the-badge)](https://www.gnu.org/software/bash/) [![GitHub issues](https://img.shields.io/github/issues/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/issues) [![GitHub stars](https://img.shields.io/github/stars/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/stargazers) [![GitHub last commit](https://img.shields.io/github/last-commit/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/commits/master) ![GitHub repo size](https://img.shields.io/github/repo-size/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab?ref=badge_shield)
 
 ___
 _Forked from [yakuake-session](https://github.com/aplatanado/yakuake-session) by [Jesús Torres](https://github.com/aplatanado), © 2010-2018._
@@ -30,7 +29,7 @@ The name is an exquisite example of over-the-top open source project naming iron
 ### _Links to more information about Yakuake_
 
 * [Project Home Page](https://kde.org/applications/system/yakuake/)
-* [Browseable Source Code Repository](https://cgit.kde.org/yakuake.git/) (or clone via [git](git://anongit.kde.org/yakuake.git)/[https](https://anongit.kde.org/yakuake.git))
+* [Browsable Source Code Repository](https://cgit.kde.org/yakuake.git/) (or clone via [git](git://anongit.kde.org/yakuake.git)/[https](https://anongit.kde.org/yakuake.git))
 * [KDE Bugtracking System](https://bugs.kde.org/buglist.cgi?component=general&list_id=1612098&product=yakuake&resolution=---)
 * [OpenDesktop.org - Yakuake](https://www.linux-apps.com/content/show.php?content=29153)
 * [KDE UserBase Wiki](https://userbase.kde.org/Yakuake)
@@ -195,18 +194,18 @@ The file `examples/yaknewtab-ssh.desktop` contains an example that launch a ssh 
 
 ## Contributing and licensing
 
-[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/0)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/0)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/1)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/1)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/2)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/2)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/3)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/3)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/4)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/4)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/5)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/5)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/6)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/6)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/7)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/7)
+[![Most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/0)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/0)[![2nd most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/1)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/1)[![Third most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/2)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/2)[![Fourth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/3)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/3)[![Fifth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/4)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/4)[![Sixth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/5)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/5)[![Seventh most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/6)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/6)[![Sourcerer.io Contributors Widget About Page](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/7)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/7)
 
-Contributers need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=GPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
+Contributors need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=GPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
 
-[![GPL-3.0 license logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](https://www.gnu.org/licenses/gpl.html) [![GFDL-1.3 license logo](https://www.gnu.org/graphics/gfdl-logo-small.png)](https://www.gnu.org/licenses/fdl.html)
+___
 
-Copyleft: All rights reversed. 2019 [Peter J. Mello](https://github.com/RogueScholar)
+[![SPDX Logo](https://user-images.githubusercontent.com/15098724/57586996-dc44ae00-74b2-11e9-92a4-8ad1b6d81d0a.png)](https://spdx.org/) [SPDX-License-Identifier: GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html)
 
-[![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png)](https://spdx.org/licenses/GPL-3.0-or-later.html) [SPDX-License-Identifier: GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html)
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FRogueScholar%2Fyaknewtab?ref=badge_large)
+[![GNU GPL-3.0 License Logo](https://user-images.githubusercontent.com/15098724/57586281-8bc85300-74a8-11e9-9ae6-0fe7b191c46f.png)](https://www.gnu.org/licenses/gpl.html) [![GNU FDL-1.3 License Logo](https://user-images.githubusercontent.com/15098724/57586323-23c63c80-74a9-11e9-8e02-700e241c1710.png)](https://www.gnu.org/licenses/fdl.html)
 
 ## Contact
 
 [![Keybase PGP](https://img.shields.io/keybase/pgp/rscholar.svg?label=Keybase.io&logo=Keybase&logoColor=white&style=for-the-badge)](https://keybase.io/rscholar) [![Twitter Follow](https://img.shields.io/twitter/follow/SingularErgoSum.svg?color=orange&label=Follow%20%40SingularErgoSum&logo=Twitter&style=for-the-badge)](https://twitter.com/SingularErgoSum)
+
+![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) Copyleft: All rights reversed. 2019 [Peter J. Mello](https://github.com/RogueScholar)
