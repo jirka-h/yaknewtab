@@ -1,23 +1,37 @@
 #!/usr/bin/env bash
-#
-# yaknewtab - A POSIX shell script to create new Yakuake tabs (a.k.a. sessions).
+# =============================================================================
+# Title:                    yaknewtab
+# Description:              POSIX shell script to open new tabs/sessions in
+#                           KDE terminal emulator Yakuake via D-Bus
+# Author:                   Peter J. Mello
+# Date:                     2019-05-12
+# Version:                  0.1-beta1
+# Usage:                    yaknewtab [options] [arguments]
+# Notes:                    All efforts were made to maximize portability for
+#                           use with any POSIX-compliant shell while permitting
+#                           use with non-compliant shells (e.g. fish)
+# Bash Version:             5.0.3
+# SPDX-License-Identifier:  GPL-3.0-or-later
+# =============================================================================
+# yaknewtab - A POSIX shell script to create new Yakuake tabs (a.k.a. sessions)
 #
 # Copyright © 2010-2018 Jesús Torres <jmtorres@ull.es>.
 #           © 2019 Peter J. Mello <admin@petermello.net>.
 #
-# This program is free software: you can redistribute it and/or modify
-#     it under the terms of the GNU Affero General Public License as published
-#     by the Free Software Foundation, either version 3 of the License, or
-#     (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify it under
+#     the terms of the GNU General Public License as published by the Free
+#     Software Foundation, either version 3 of the License, or (at your option)
+#     any later version.
 #
-#     This program is distributed in the hope that it will be useful,
-#     but WITHOUT ANY WARRANTY; without even the implied warranty of
-#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#     GNU Affero General Public License for more details.
+#     This program is distributed in the hope that it will be useful, but 
+#     WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+#     Public License for more details.
 #
-#     You should have received a copy of the GNU Affero General Public License
-#     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
+#     You should have received a copy of the GNU General Public License along
+#     with this program. If not, see <https://www.gnu.org/licenses/>.
+# =============================================================================
+
 
 # Set to 1 to override the fish shell autodetection
 FISH_SHELL=
@@ -209,7 +223,7 @@ init_ipc_interface() {
 
 ### Main function
 
-yakuake_session() {
+main() {
   typeset cwd
   cwd="$PWD"
   typeset title
@@ -352,7 +366,7 @@ EOF
     $(cat "$SESSION_FILE")
 EOF
 
-  # We use souce builtin instead of '.' because of fish shell and
+  # We use source builtin instead of '.' because of fish shell and
   # we put a space before to exclude it from history.
   yakuake_runcommand " source '$SESSION_FILE'" || error_exit 7 'cannot run a command inside the new session'
 
@@ -372,5 +386,5 @@ logged_user=$(logname)
 if [ "$UID" == 0 ] && [ "$logged_user" != "$USER" ]; then
   su "$logged_user" -c "$0" "$@" -- "$0" "$@"
 else
-  yakuake_session "$@"
+  main "$@"
 fi

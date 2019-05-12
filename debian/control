@@ -11,5 +11,11 @@ Vcs-Git: https://github.com/RogueScholar/yaknewtab.git
 Package: yaknewtab
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Shell script to open new tabs in Yakuake
+ yaknewtab is a (mostly) POSIX shell script that greatly simplifies the
+ creation of new tabs/sessions in Yakuake.
+ .
+ It uses simple logic to determine the D-Bus command line tool needed to
+ communicate with the already-running Yakuake process, adding the specifics
+ (supplied as standard POSIX flags and arguments) in the necessary syntax to
+ generate the desired result.

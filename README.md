@@ -1,6 +1,8 @@
-# yaknewtab
+# yaknewtab [![GitHub license](https://img.shields.io/github/license/RogueScholar/yaknewtab.svg?logo=GNU&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/blob/master/LICENSE)
 
 #### A shell script for opening new Yakuake tabs/sessions
+
+[![made-with-bash](https://img.shields.io/static/v1.svg?label=Made%20With&message=Bash&color=blue&logo=GNU&style=for-the-badge)](https://www.gnu.org/software/bash/) [![GitHub issues](https://img.shields.io/github/issues/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/issues) [![GitHub stars](https://img.shields.io/github/stars/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/stargazers) ![GitHub last commit](https://img.shields.io/github/last-commit/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)
 
 ___
 _Forked from [yakuake-session](https://github.com/aplatanado/yakuake-session) by [Jesús Torres](https://github.com/aplatanado), © 2010-2018._
@@ -41,12 +43,12 @@ The name is an exquisite example of over-the-top open source project naming iron
   * For a permanent change, use the following command (provided that you placed it in a location in your $PATH) to open the script file in the default editor and change line 14 accordingly: `FISH_SHELL=1` to enable the Fish shell changes or `FISH_SHELL=0` to disable them.
 
       ```bash
-      which yaknewtab | xargs sudoedit -e
+      command -v yaknewtab | xargs sudoedit -e
       ```
 
 ## Installation
 
-Clone this repository.
+Clone this repository and navigate into the new repository directory.
 
 ```bash
 git clone https://github.com/RogueScholar/yaknewtab.git && cd yaknewtab
@@ -54,7 +56,7 @@ git clone https://github.com/RogueScholar/yaknewtab.git && cd yaknewtab
 
 Copy the yaknewtab script to `~/bin`, `/usr/local/bin` or some other directory in your `$PATH` variable so it can be executed by just its name.
 
-If the file is in any other location you will be forced to type the relative or full path of the script everytime you wish to use it.
+If the file is in any other location you will be forced to type the relative or full path of the script every time you wish to use it.
 
 ```bash
 # Examine your $PATH environment variable to aid in selecting an appropriate folder
@@ -66,13 +68,11 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$H
 # Copy the script to the folder of your choice and ensure
 # it has the right ownership and permissions
 
-# Installation system-wide (for all users)
-$ sudo chown root:root ./yaknewtab && sudo chmod 0755 ./yaknewtab
-$ sudo cp ./yaknewtab /usr/local/bin
+# Installation system-wide (for all users) in /usr/local/bin
+$ sudo install -Dp --mode=755 --owner=root --group=root yaknewtab /usr/local/bin/yaknewtab
 
-# Installation for only the current user
-$ chmod 0755 ./yaknewtab
-$ cp ./yaknewtab $HOME/bin
+# Installation for the current user only in $HOME/bin
+$ install -Dp --mode=755 yaknewtab $HOME/bin/yaknewtab
 ```
 
 ## Usage
@@ -175,12 +175,16 @@ The file `examples/yaknewtab-ssh.desktop` contains an example that launch a ssh 
 
 ## Contributing and licensing
 
-Contributers need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=AGPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
+[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/0)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/0)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/1)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/1)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/2)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/2)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/3)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/3)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/4)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/4)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/5)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/5)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/6)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/6)[![](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/7)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/7)
 
-<iframe id="e-sign-process" src="http://contributoragreements.org/u2s/276z9weywp" width="100%" height="100%"></iframe>
+Contributers need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=GPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
 
-![AGPL-3.0 license logo](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)
+![GPL-3.0 license logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
 
 Copyleft: All rights reversed. 2019 [Peter J. Mello](https://github.com/RogueScholar)
 
-![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) SPDX-License-Identifier: AGPL-3.0-or-later
+![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) SPDX-License-Identifier: GPL-3.0-or-later
+
+## Contact
+
+![Keybase PGP](https://img.shields.io/keybase/pgp/rscholar.svg?label=Keybase.io&logo=Keybase&logoColor=white&style=for-the-badge) ![Twitter Follow](https://img.shields.io/twitter/follow/SingularErgoSum.svg?color=orange&label=Follow%20%40SingularErgoSum&logo=Twitter&style=for-the-badge)
