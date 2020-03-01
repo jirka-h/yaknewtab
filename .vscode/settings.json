@@ -18,5 +18,15 @@
 		"workdir",
 		"xargs",
 		"yaknewtab"
-	]
+	],
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#96433f",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#132d14",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"statusBar.background": "#723330",
+		"statusBarItem.hoverBackground": "#96433f",
+		"statusBar.foreground": "#e7e7e7"
+	}
 }

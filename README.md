@@ -33,7 +33,7 @@ The name is an exquisite example of over-the-top open source project naming iron
 * [KDE Bugtracking System](https://bugs.kde.org/buglist.cgi?component=general&list_id=1612098&product=yakuake&resolution=---)
 * [OpenDesktop.org - Yakuake](https://www.linux-apps.com/content/show.php?content=29153)
 * [KDE UserBase Wiki](https://userbase.kde.org/Yakuake)
-* [Freenode Web Chat: #yakuake](http://webchat.freenode.net/?randomnick=1&channels=%23yakuake&prompt=1&uio=MTY9dHJ1ZSY5PXRydWUmMTI9dHJ1ZQ6c) ([irc:// link](irc://irc.freenode.org/#yakuake))
+* [Freenode Web Chat: #yakuake](http://webchat.freenode.net/?randomnick=1&channels=%23yakuake&prompt=1&uio=MTY9dHJ1ZSY5PXRydWUmMTI9dHJ1ZQ6c)/[ircs:// link](ircs://chat.freenode.net:6697/#yakuake)
 
 ## Bugs & known issues
 
@@ -194,6 +194,8 @@ The file `examples/yaknewtab-ssh.desktop` contains an example that launch a ssh 
 
 ## Contributing and licensing
 
+[![Feature Requests](http://feathub.com/RogueScholar/yaknewtab?format=svg)](http://feathub.com/RogueScholar/yaknewtab)
+
 [![Most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/0)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/0)[![2nd most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/1)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/1)[![Third most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/2)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/2)[![Fourth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/3)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/3)[![Fifth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/4)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/4)[![Sixth most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/5)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/5)[![Seventh most recent contributor](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/6)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/6)[![Sourcerer.io Contributors Widget About Page](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/images/7)](https://sourcerer.io/fame/RogueScholar/RogueScholar/yaknewtab/links/7)
 
 Contributors need to sign the [Contributor License Agreement](http://contributoragreements.org/ca-cla-chooser/?beneficiary-name=Peter+J.+Mello&project-name=yaknewtab&project-website=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-email=admin%40petermello.net&process-url=https%3A%2F%2Fgithub.com%2FRogueScholar%2Fyaknewtab&project-jurisdiction=United+States+of+America&agreement-exclusivity=exclusive&fsfe-compliance=&fsfe-fla=&outbound-option=fsfe&outboundlist=GPL-3.0&outboundlist-custom=&medialist=CC-BY-NC-SA-4.0&patent-option=Traditional&your-date=&your-name=&your-title=&your-address=&your-patents=&pos=apply&action=) before their pull requests will be reviewed.
@@ -206,6 +208,6 @@ ___
 
 ## Contact
 
-[![Keybase PGP](https://img.shields.io/keybase/pgp/rscholar.svg?label=Keybase.io&logo=Keybase&logoColor=white&style=for-the-badge)](https://keybase.io/rscholar) [![Twitter Follow](https://img.shields.io/twitter/follow/SingularErgoSum.svg?color=orange&label=Follow%20%40SingularErgoSum&logo=Twitter&style=for-the-badge)](https://twitter.com/SingularErgoSum)
+[![Keybase PGP](https://img.shields.io/keybase/pgp/rscholar.svg?label=Keybase.io&logo=Keybase&logoColor=white&style=for-the-badge)](https://keybase.io/rscholar) [![Twitter Follow](https://img.shields.io/twitter/follow/SingularErgoSum.svg?color=orange&label=Follow%20%40SingularErgoSum&logo=Twitter&style=for-the-badge)](https://twitter.com/SingularErgoSum) [![Say Thanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RogueScholar)
 
 ![Creative Commons ShareAlike Symbol-20px](https://user-images.githubusercontent.com/15098724/56478451-5958a680-6464-11e9-944a-f4c744e70f26.png) Copyleft: All rights reversed. 2019 [Peter J. Mello](https://github.com/RogueScholar)

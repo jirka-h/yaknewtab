@@ -5,6 +5,7 @@ DIRS=bin share
 INSTALL_DIRS=`find $(DIRS) -type d 2>/dev/null`
 INSTALL_FILES=`find $(DIRS) -type f 2>/dev/null`
 DOC_FILES=*.md *.txt
+MAN_FILES=*.1
 
 PKG_DIR=yaknewtab
 PKG_NAME=$(NAME)-$(VERSION)
@@ -12,7 +13,8 @@ PKG=$(PKG_DIR)/$(PKG_NAME).tar.gz
 SIG=$(PKG_DIR)/$(PKG_NAME).asc
 
 PREFIX?=/usr/local
-DOC_DIR=$(PREFIX)/share/doc/$(PKG_NAME)
+DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/$(PKG_NAME)
+MAN_DIR=$(DESTDIR)$(PREFIX)/share/man/man1
 
 pkg:
 	mkdir -p $(PKG_DIR)
@@ -45,7 +47,7 @@ release: $(PKG) $(SIG) tag
 
 install:
 	for dir in $(INSTALL_DIRS); do mkdir -p $(PREFIX)/$$dir; done
-	for file in $(INSTALL_FILES); do cp $$file $(PREFIX)/$$file; done
+	for file in $(INSTALL_FILES); do install -D $$file $(PREFIX)/$$file; done
 	mkdir -p $(DOC_DIR)
 	cp -r $(DOC_FILES) $(DOC_DIR)/
 

@@ -1,0 +1,2 @@
+?package(yaknewtab):needs="X11|wm" section="Applications/Terminal Emulators"\
+  title="YakNewTab" command="/usr/bin/yaknewtab"
