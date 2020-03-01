@@ -1,6 +1,6 @@
 # yaknewtab [![GitHub license](https://img.shields.io/github/license/RogueScholar/yaknewtab.svg?logo=GNU&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/blob/master/LICENSE)
 
-#### A shell script for opening new Yakuake tabs/sessions
+## A shell script for opening new Yakuake tabs/sessions
 
 [![made-with-bash](https://img.shields.io/static/v1.svg?label=Made%20With&message=Bash&color=blue&logo=GNU&style=for-the-badge)](https://www.gnu.org/software/bash/) [![GitHub issues](https://img.shields.io/github/issues/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/issues) [![GitHub stars](https://img.shields.io/github/stars/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/stargazers) [![GitHub last commit](https://img.shields.io/github/last-commit/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)](https://github.com/RogueScholar/yaknewtab/commits/master) ![GitHub repo size](https://img.shields.io/github/repo-size/RogueScholar/yaknewtab.svg?logo=GitHub&style=for-the-badge)
 
@@ -26,7 +26,7 @@ A terminal emulator developed and distributed by KDE as part of the Plasma deskt
 
 The name is an exquisite example of over-the-top open source project naming irony. Technically a portmanteau crossed with a "backronym," it's derived from the motto "Yet Another Kuake." In keeping with KDE project tradition, phonemes that can be represented with the letter 'k' are styled as such, explaining the odd spelling.
 
-#### _Links to more information about Yakuake_
+### _Links to more information about Yakuake_
 
 * [Project Home Page](https://kde.org/applications/system/yakuake/)
 * [Browsable Source Code Repository](https://cgit.kde.org/yakuake.git/) (or clone via [git](git://anongit.kde.org/yakuake.git)/[https](https://anongit.kde.org/yakuake.git))
@@ -152,8 +152,18 @@ instead of Konsole coping `konsolehere.desktop` into KDE Service Menus.
 ```bash
 # KDE 4
 cp ServiceMenus/konsolehere.desktop ~/.kde/share/kde4/services/ServiceMenus/
-# KDE 5
+```
+
+```
+# KDE 5: for the current user only.
 cp ServiceMenus/konsolehere.desktop ~/.local/share/kservices5/ServiceMenus/
+```
+
+or
+
+```
+# KDE 5: system-wide
+cp ServiceMenus/konsolehere.desktop /usr/share/kservices5/ServiceMenus/
 ```
 
 If we do not want to change the behavior of "Open terminal here", then copy
@@ -165,6 +175,13 @@ Dolphin.
 cp ServiceMenus/yaknewtab-here.desktop ~/.kde/share/kde4/services/ServiceMenus/
 # KDE 5
 cp ServiceMenus/yaknewtab-here.desktop ~/.local/share/kservices5/ServiceMenus/
+```
+
+or
+
+```
+# KDE 5: system-wide
+cp ServiceMenus/yakuakehere.desktop /usr/share/kservices5/ServiceMenus/
 ```
 
 ## Quick Access Menu
