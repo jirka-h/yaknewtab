@@ -4,8 +4,8 @@
 # Description:              POSIX shell script to open new tabs/sessions in
 #                           KDE terminal emulator Yakuake via D-Bus
 # Author:                   Peter J. Mello
-# Date:                     2019-05-12
-# Version:                  0.1-beta1
+# Date:                     2019-06-19
+# Version:                  0.2
 # Usage:                    yaknewtab [options] [arguments]
 # Notes:                    All efforts were made to maximize portability for
 #                           use with any POSIX-compliant shell while permitting
@@ -173,7 +173,7 @@ init_ipc_interface() {
     }
 
     yakuake_runcommand() {
-      "$dbus_cmd" org.kde.yakuake /yakuake/sessions runCommand "$1" >/dev/null
+      "$dbus_cmd" org.kde.yakuake /yakuake/sessions org.kde.yakuake.runCommandInTerminal "$1" >/dev/null
     }
 
     yakuake_settitle() {
@@ -230,9 +230,9 @@ main() {
   title=''
   typeset cmd
   cmd=''
-  typeset hold
+  typeset -i hold
   hold=0
-  typeset show
+  typeset -i show
   show=1
 
   # Parse command line options
