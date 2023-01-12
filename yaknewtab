@@ -173,7 +173,7 @@ init_ipc_interface() {
     }
 
     yakuake_runcommand() {
-      "$dbus_cmd" org.kde.yakuake /yakuake/sessions org.kde.yakuake.runCommandInTerminal "$1" >/dev/null
+      "$dbus_cmd" org.kde.yakuake /yakuake/sessions runCommand "$1" > /dev/null
     }
 
     yakuake_settitle() {
